@@ -1,5 +1,7 @@
 public class Dog extends Animal{
 
+    private String voice = "Woof";
+
     public Dog() {
     }
 
