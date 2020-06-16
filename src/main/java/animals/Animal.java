@@ -8,6 +8,10 @@ public class Animal {
     private Integer weight;
     private String voice;
 
+    public void yieldVoice(){
+        System.out.println(this.getClass()+" goes "+this.getVoice());
+    }
+
     public Animal() {
     }
 
