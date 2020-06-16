@@ -3,7 +3,7 @@ package animals;
 public class Dog extends Animal{
 
     private final String voice = "Woof";
-    private Muzzle muzzle = new Muzzle();
+    private Muzzle muzzle;
     public Muzzle getMuzzle() {
         return muzzle;
     }
@@ -14,19 +14,19 @@ public class Dog extends Animal{
 
     public Dog() {
         this.setVoice(voice);
-        this.setMuzzle(muzzle);
+        this.muzzle = new Muzzle();
     }
 
     public Dog(String gender, String race) {
         super(gender, race);
         this.setVoice(voice);
-        this.setMuzzle(muzzle);
+        this.muzzle = new Muzzle();
     }
 
     public Dog(String name, Integer age, String gender, String race, Integer weight) {
         super(name, age, gender, race, weight);
         this.setVoice(voice);
-        this.setMuzzle(muzzle);
+        this.muzzle = new Muzzle();
     }
 
 
