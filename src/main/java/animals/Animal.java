@@ -6,6 +6,7 @@ public class Animal {
     private String gender;
     private String race;
     private Integer weight;
+    private String voice;
 
     public Animal() {
     }
@@ -70,5 +71,13 @@ public class Animal {
         }else {
             System.out.println(this.getName()+" cannot weight less than 0");
         }
+    }
+
+    public String getVoice() {
+        return voice;
+    }
+
+    public void setVoice(String voice) {
+        this.voice = voice;
     }
 }

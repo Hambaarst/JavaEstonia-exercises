@@ -1,5 +1,5 @@
-Exercises for java advanced.
+#Exercises for java advanced.
 
-	Encapsulation:
+	Inheritance:
 		-animals.Dog
-		-Pocket
+		-Shape exercise was really weird for me because the task didn't make sense for me.
