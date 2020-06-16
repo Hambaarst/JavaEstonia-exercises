@@ -1,5 +1,5 @@
 Exercises for java advanced.
 
 	Encapsulation:
-		-Dog
+		-animals.Dog
 		-Pocket

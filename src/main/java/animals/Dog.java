@@ -1,3 +1,5 @@
+package animals;
+
 public class Dog extends Animal{
 
     private String voice = "Woof";
@@ -15,12 +17,16 @@ public class Dog extends Animal{
 
     @Override
     public String toString() {
-        return "Dog{" +
+        return "animals.Dog{" +
                 "name='" + getName() + '\'' +
                 ", age=" + getAge() +
                 ", gender='" + getGender() + '\'' +
                 ", race='" + getRace() + '\'' +
                 ", weight=" + getWeight() +
                 '}';
+    }
+
+    public String getVoice() {
+        return voice;
     }
 }

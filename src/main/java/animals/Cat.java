@@ -1,3 +1,5 @@
+package animals;
+
 public class Cat extends Animal{
 
     private String voice = "Meow";
@@ -13,4 +15,7 @@ public class Cat extends Animal{
         super(name, age, gender, race, weight);
     }
 
+    public String getVoice() {
+        return voice;
+    }
 }
