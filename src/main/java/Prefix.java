@@ -12,6 +12,7 @@ public class Prefix {
             return false;
         }
     }
+    private static String result;
     public static String prefixClac(String input){
         ArrayList<Integer> numbers = new ArrayList<>();
         String[] maths = input.split(" ");
@@ -22,13 +23,17 @@ public class Prefix {
         }
         switch (maths[0]){
             case "+":
-                return Integer.toString(numbers.get(0)+numbers.get(1));
+                result = Integer.toString(numbers.get(0)+numbers.get(1));
+                return result;
             case "-":
-                return Integer.toString(numbers.get(0)-numbers.get(1));
+                result=Integer.toString(numbers.get(0)-numbers.get(1));
+                return result;
             case "*":
-                return Integer.toString(numbers.get(0)*numbers.get(1));
+                result=Integer.toString(numbers.get(0)*numbers.get(1));
+                return result;
             case "/":
-                return Integer.toString(numbers.get(0)/numbers.get(1));
+                result=Integer.toString(numbers.get(0)/numbers.get(1));
+                return result;
         }
         return "Something went wrong";
     }

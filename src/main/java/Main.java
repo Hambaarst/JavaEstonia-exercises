@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -24,7 +25,8 @@ public class Main {
     public static final String PURPLE = "\u001B[35m";
     public static final String CYAN = "\u001B[36m";
     public static final String WHITE = "\u001B[37m";
-
+    private static String result;
+    static ArrayList<String> results = new ArrayList<>();
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -34,11 +36,15 @@ public class Main {
         switch (scanner.nextLine()){
             case "1":
                 System.out.println("Enter your iterator ("+YELLOW+"+, -, *, /"+RESET+") and numbers.("+YELLOW+"iterator "+BLUE+"number number"+RESET+")");
-                System.out.println(Prefix.prefixClac(scanner.nextLine()));
+                result = Prefix.prefixClac(scanner.nextLine());
+                results.add(result);
+                System.out.println(result);
                 break;
             case "2":
                 System.out.println("Enter your numbers and iterator("+YELLOW+"+, -, *, /"+RESET+").("+BLUE+"number number"+YELLOW+" iterator"+RESET+")");
-                System.out.println(Postfix.postfixClac(scanner.nextLine()));
+                result = Postfix.postfixClac(scanner.nextLine());
+                results.add(result);
+                System.out.println(result);
                 break;
             default:
                 System.out.println("Error! Wrong input.");
