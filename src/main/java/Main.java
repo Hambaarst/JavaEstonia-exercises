@@ -31,13 +31,14 @@ public class Main {
         System.out.println("Welcome to calculator.\nWhich calculator do you wish to use? (enter corresponding number)\n" +
                 "1. "+RED+"Prefix"+RESET+" calculator ("+YELLOW+"iterator "+BLUE+"number number"+RESET+")"+
                 "\n2."+RED+" Postfix"+RESET+" calculator ("+BLUE+"number number"+YELLOW+" iterator"+RESET+")");
-        switch (scanner.next()){
+        switch (scanner.nextLine()){
             case "1":
-                System.out.println("Enter your iterator (+, -, *, /) and numbers.("+YELLOW+"iterator "+BLUE+"number number"+RESET+")");
-                //prefix.java
+                System.out.println("Enter your iterator ("+YELLOW+"+, -, *, /"+RESET+") and numbers.("+YELLOW+"iterator "+BLUE+"number number"+RESET+")");
+                System.out.println(Prefix.prefixClac(scanner.nextLine()));
                 break;
             case "2":
-                //postfix.java
+                System.out.println("Enter your numbers and iterator("+YELLOW+"+, -, *, /"+RESET+").("+BLUE+"number number"+YELLOW+" iterator"+RESET+")");
+                System.out.println(Postfix.postfixClac(scanner.nextLine()));
                 break;
             default:
                 System.out.println("Error! Wrong input.");
