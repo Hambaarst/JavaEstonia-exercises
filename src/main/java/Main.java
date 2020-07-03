@@ -1,3 +1,8 @@
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -27,8 +32,9 @@ public class Main {
     public static final String WHITE = "\u001B[37m";
     private static String result;
     static ArrayList<String> results = new ArrayList<>();
+    static Path relativePath = Paths.get("src\\main\\java\\results.txt");
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to calculator.\nWhich calculator do you wish to use? (enter corresponding number)\n" +
                 "1. "+RED+"Prefix"+RESET+" calculator ("+YELLOW+"iterator "+BLUE+"number number"+RESET+")"+
@@ -38,13 +44,29 @@ public class Main {
                 System.out.println("Enter your iterator ("+YELLOW+"+, -, *, /"+RESET+") and numbers.("+YELLOW+"iterator "+BLUE+"number number"+RESET+")");
                 result = Prefix.prefixClac(scanner.nextLine());
                 results.add(result);
-                System.out.println(result);
+                System.out.println("What do you wish to do with the result:\n1.Print it on the screen" +
+                        "\n2.Save it to the file\n3.Save it to the file and then read the file");
+                switch (scanner.nextLine()){
+                    case "1":
+                        System.out.println(result);
+                        break;
+                    case "2":
+                        Files.write(relativePath,results);
+                }
                 break;
             case "2":
                 System.out.println("Enter your numbers and iterator("+YELLOW+"+, -, *, /"+RESET+").("+BLUE+"number number"+YELLOW+" iterator"+RESET+")");
                 result = Postfix.postfixClac(scanner.nextLine());
                 results.add(result);
-                System.out.println(result);
+                System.out.println("What do you wish to do with the result:\n1.Print it on the screen" +
+                        "\n2.Save it to the file\n3.Save it to the file and then read the file");
+                switch (scanner.nextLine()){
+                    case "1":
+                        System.out.println(result);
+                        break;
+                    case "2":
+                        Files.write(relativePath,results);
+                }
                 break;
             default:
                 System.out.println("Error! Wrong input.");
