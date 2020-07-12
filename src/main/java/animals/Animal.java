@@ -8,17 +8,15 @@ public class Animal {
     private Integer weight;
     private String voice;
 
-    public void yieldVoice(){
-        System.out.println(this.getClass()+" goes "+this.getVoice());
+    public void yieldVoice() {
+        System.out.println(this.getClass() + " goes " + this.getVoice());
     }
 
     public Animal() {
     }
 
     public Animal(String gender, String race) {
-        this("default",0,"default","default",0);
-        this.gender = gender;
-        this.race = race;
+        this("default", 0, gender, race, 0);
     }
 
     public Animal(String name, Integer age, String gender, String race, Integer weight) {
@@ -42,10 +40,10 @@ public class Animal {
     }
 
     public void setAge(Integer age) {
-        if (age>0){
+        if (age > 0) {
             this.age = age;
         } else {
-            System.out.println(this.getName()+" age cannot be less than 0");
+            System.out.println(this.getName() + " age cannot be less than 0");
         }
     }
 
@@ -70,10 +68,10 @@ public class Animal {
     }
 
     public void setWeight(Integer weight) {
-        if (weight>0){
+        if (weight > 0) {
             this.weight = weight;
-        }else {
-            System.out.println(this.getName()+" cannot weight less than 0");
+        } else {
+            System.out.println(this.getName() + " cannot weight less than 0");
         }
     }
 
